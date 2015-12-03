@@ -11,6 +11,7 @@ router.get('/shortAnswer', function(req, res, next) {
   res.render('shortAnswer', { title: 'Short Answer' });
 });
 
+/*get the true false page */
 router.get('/trueFalse', function(req, res, next) {
   res.render('trueFalse', { title: 'Short Answer' });
 });

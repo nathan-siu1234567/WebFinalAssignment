@@ -15,13 +15,22 @@
 
       <ul class="nav nav-tabs">
         <li role="presentation"><a href="/survey">SURVEYS</a></li>
+        
+        
+        <!-- <li role="presentation"><a href="/surveyCreate">CREATE SURVEY</a></li> -->
+        <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                CREATE SURVEY <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+            <li role="presentation"><a href="/shortAnswer">SHORT ANSWER</a></li>
+            <li role="presentation"><a href="/trueFalse">TRUE/FALSE</a></li>
+            </ul>
+        </li>  
         <li role="presentation"><a href="/about">ABOUT</a></li>
+        
         <li role="presentation"><a href="/login">LOGIN</a></li>
         <li role="presentation"><a href="/register">REGISTER</a></li>
-        <li role="presentation"><a href="/surveyCreate">CREATE SURVEY</a></li>
-        <li role="presentation"><a href="/surveyList">SURVEY LIST</a></li>
-        <li role="presentation"><a href="/surveyResults">SURVEY RESULTS</a></li>
-        <li role="presentation"><a href="/surveyTake">SURVEY TAKE</a></li>
       </ul>
       
   	<!--Create the navbar and fix it at the top

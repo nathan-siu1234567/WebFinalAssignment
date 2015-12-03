@@ -1,0 +1,36 @@
+<%- include partials/header.ejs %>
+
+<h1>Create True False Survey</h1>
+	
+	<main class="container">
+		
+
+	
+		
+		<div class="col-sm-4">
+			<form method="post">
+				<fieldset class="form-group">
+					<label for="surveyquestion">Survey Question *</label>
+					<input name="surveyquestion" type="text" class="form-control" required autofocus />
+				</fieldset>
+				<fieldset class="form-group">
+					<label for="surveyanswer1">Survey Answer1: *</label>
+				<textarea name="surveyanswer1" type="text" class="form-control"></textarea>
+				</fieldset>
+				<fieldset class="form-group">
+					<label for="surveyanswer2">Survey Answer2: *</label>
+				<textarea name="surveyanswer2" type="text" class="form-control"></textarea>
+				</fieldset>
+			
+			
+			
+        	
+				<fieldset class="form-group text-right">
+					<input type="submit" class="btn btn-success" value="Create Survey"/>
+				</fieldset>
+			</form>
+		</div>
+	</main>
+	
+  </body>
+</html>

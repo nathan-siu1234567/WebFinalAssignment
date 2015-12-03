@@ -11,4 +11,8 @@ router.get('/shortAnswer', function(req, res, next) {
   res.render('shortAnswer', { title: 'Short Answer' });
 });
 
+router.get('/trueFalse', function(req, res, next) {
+  res.render('trueFalse', { title: 'Short Answer' });
+});
+
 module.exports = router;

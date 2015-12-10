@@ -4,6 +4,7 @@ var router = express.Router();
 
 
 var User = require('../models/user');
+var truefalse = require('../models/surveyTrueFalse');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -89,5 +90,14 @@ router.get('/shortAnswer', function(req, res, next) {
 router.get('/trueFalse', function(req, res, next) {
   res.render('trueFalse', { title: 'Short Answer' });
 });
+
+/* POST truefalse creation. */
+router.post('/trueFalse', passport.authenticate('local-trueFalse', 
+{
+    //Success go to survey page fail go to true false
+    successRedirect : '/survey',
+    failureRedirect : '/trueFalse',
+   
+}));
 
 module.exports = router;

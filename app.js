@@ -1,22 +1,33 @@
 var express = require('express');
+var passport = require('passport');
+var mongoose = require('mongoose');
+
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+//DB Setup 
+var DB = require('./config/loginDB.js');
+mongoose.connect(DB.url);
+mongoose.connection.on('error', function(){
+  console.error('MongoDB Connection Error');
+});
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var survey = require('./routes/survey');
 var about = require('./routes/about');
-var login = require('./routes/login');
-var register = require('./routes/register');
 var surveyCreate = require('./routes/surveyCreate');
 var surveyList = require('./routes/surveyList');
 var surveyTake = require('./routes/surveyTake');
 var surveyResults = require('./routes/surveyResults');
 
 var app = express();
+
+require('./config/passport')(passport);
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -30,12 +41,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+
+
 app.use('/', routes);
 app.use('/users', users);
 app.use('/survey', survey);
 app.use('/about', about);
-app.use('/login', login);
-app.use('/register', register);
 app.use('/surveyCreate', surveyCreate);
 app.use('/surveyList', surveyList);
 app.use('/surveyTake', surveyTake);

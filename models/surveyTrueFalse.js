@@ -11,7 +11,10 @@ var TrueFalseSchema = new Schema({
 	surveyQuestion4: String,
 	surveyAnswer4: Number,
 	surveyQuestion5: String,
-	surveyAnswer5: Number
+	surveyAnswer5: Number,
+	
+	surveyCount:Number,
+	surveyLifetime:Date
 	
 	
 	

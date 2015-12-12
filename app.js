@@ -8,12 +8,43 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+
+
+
+var TrueFalseSchema = new mongoose.Schema({
+	surveyQuestion: String,
+	surveyAnswer1: Number,
+	surveyQuestion2: String,
+	surveyAnswer2: Number,
+	surveyQuestion3: String,
+	surveyAnswer3: Number,
+	surveyQuestion4: String,
+	surveyAnswer4: Number,
+	surveyQuestion5: String,
+	surveyAnswer5: Number,
+	
+	surveyCount:Number,
+	surveyLifetime:Date
+	
+	
+	
+
+}, {
+	collection: 'trueFalse'
+});
+var survey = mongoose.model('TrueFalse',TrueFalseSchema);
+mongoose.createConnection("mongodb://nathan:ns6098009@ds027155.mongolab.com:27155/truefalse");
+var trueFalseDB = mongoose.connection;
+trueFalseDB.on('error',console.error.bind(console,'connection error: '));
+
+
 //DB Setup 
 var DB = require('./config/loginDB.js');
 mongoose.connect(DB.url);
 mongoose.connection.on('error', function(){
   console.error('MongoDB Connection Error');
 });
+
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -23,6 +54,9 @@ var surveyCreate = require('./routes/surveyCreate');
 var surveyList = require('./routes/surveyList');
 var surveyTake = require('./routes/surveyTake');
 var surveyResults = require('./routes/surveyResults');
+
+
+
 
 var app = express();
 

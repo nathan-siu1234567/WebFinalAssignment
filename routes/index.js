@@ -3,8 +3,9 @@ var passport = require('passport');
 var router = express.Router();
 
 
+
 var User = require('../models/user');
-var truefalse = require('../models/surveyTrueFalse');
+var Truefalse = require('../models/surveyTrueFalse');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -92,12 +93,21 @@ router.get('/trueFalse', function(req, res, next) {
 });
 
 /* POST truefalse creation. */
-router.post('/trueFalse', passport.authenticate('local-trueFalse', 
-{
-    //Success go to survey page fail go to true false
-    successRedirect : '/survey',
-    failureRedirect : '/trueFalse',
+router.post('/trueFalse',function(req,res){
+    var questionOne = req.body.surveyQuestion;
+    var questionTwo = req.body.surveyQuestion2;
+    var questionThree = req.body.surveyQuestion3;
+    var questionFour = req.body.surveyQuestion4;
+    var questionFive = req.body.surveyQuestion5;
+    var endDate = req.body.surveyLifetime;
+    var survey = new Truefalse({surveyQuestion: questionOne, surveyQuestion2: questionTwo, surveyQuestion3: questionThree,
+    surveyQuestion4: questionFour, surveyQuestion5: questionFive, surveyLiftime: endDate
+    
+    
+    });
+    survey.save();
    
-}));
-
+   
+    
+});
 module.exports = router;

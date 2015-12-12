@@ -23,4 +23,4 @@ var TrueFalseSchema = new Schema({
 	collection: 'trueFalse'
 });
 
-module.exports = mongoose.model('truefalse', TrueFalseSchema);
+module.exports = mongoose.model('truefalse',  TrueFalseSchema);

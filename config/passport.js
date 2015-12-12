@@ -6,7 +6,7 @@ var User = require('../models/user');
 
 // true false survey
 
-var truefalse = require('../models/surveyTrueFalse');
+
 	
 module.exports = function(passport) 
 {
@@ -118,57 +118,6 @@ module.exports = function(passport)
 		});
 	}));
 	
-	passport.use('local-trueFalse', new LocalStrategy({
-		passReqToCallback: true
-	},
-	
-	function(req, username, password, done) 
-	{
-		
-		//asynchronous
-		process.nextTick(function() 
-		{
-			// if user is logged in already
-			if(!req.user) 
-			{
-				User.findOne({'username': username},
-				function(err, user) 
-				{
-					//if any errors happen
-					if(err) 
-					{
-						return done(err);
-					}
-					
-					else 
-					{
-						// creating the new survey
-						var newTrueFalse = new truefalse(req.body);
-						newTrueFalse.Question1 = newTrueFalse.surveyQuestion;
-						newTrueFalse.Question2 = newTrueFalse.surveyQuestion2;
-						newTrueFalse.Question3 = newTrueFalse.surveyQuestion3;
-						newTrueFalse.Question4 = newTrueFalse.surveyQuestion4;
-						newTrueFalse.Question5 = newTrueFalse.surveyQuestion5;
-						
-						
-						newTrueFalse.save(function(err) 
-						{
-							if(err) 
-							{
-								throw err;
-							}
-							return done(null, newTrueFalse);
-						});
-					}
-				});
-			} 
-			else 
-			{
-				// everything ok, register the user
-				return done(null, req.truefalse);
-			}
-		});
-	}));
 	
 }
 	

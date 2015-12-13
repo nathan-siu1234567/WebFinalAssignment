@@ -94,11 +94,11 @@ router.get('/trueFalse', function(req, res, next) {
 
 /* POST truefalse creation. */
 router.post('/trueFalse',function(req,res){
-    var questionOne = req.body.surveyQuestion;
-    var questionTwo = req.body.surveyQuestion2;
-    var questionThree = req.body.surveyQuestion3;
-    var questionFour = req.body.surveyQuestion4;
-    var questionFive = req.body.surveyQuestion5;
+    var questionOne = req.body.surveyquestion;
+    var questionTwo = req.body.surveyquestion2;
+    var questionThree = req.body.surveyquestion3;
+    var questionFour = req.body.surveyquestion4;
+    var questionFive = req.body.surveyquestion5;
     var endDate = req.body.surveyLifetime;
     var survey = new Truefalse({surveyQuestion: questionOne, surveyQuestion2: questionTwo, surveyQuestion3: questionThree,
     surveyQuestion4: questionFour, surveyQuestion5: questionFive, surveyLiftime: endDate

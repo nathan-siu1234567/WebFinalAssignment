@@ -34,7 +34,7 @@ router.get('/login', function (req, res, next)
     }
     else 
     {
-        return res.redirect('/users');
+        return res.redirect('/survey');
     }
 });
 

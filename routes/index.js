@@ -38,6 +38,17 @@ router.get('/login', function (req, res, next)
     }
 });
 
+/* Render Logout success landing page. */
+router.get('/logoutSuccess', function (req, res, next) 
+{
+        res.render('logoutSuccess', 
+        {
+            title: 'logoutSuccess',
+            //messages: req.flash('loginMessage'),
+            displayName: req.user ? req.user.displayName : ''
+        });
+});
+
 /* Render Login success landing page. */
 router.get('/loginSuccess', function (req, res, next) 
 {
@@ -111,7 +122,7 @@ router.post('/register', passport.authenticate('local-registration',
 router.get('/logout', function (req, res)
 {
   req.logout();
-  res.redirect('/survey');
+  res.redirect('/logoutSuccess');
 });
 
 

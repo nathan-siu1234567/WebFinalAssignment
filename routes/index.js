@@ -41,10 +41,10 @@ router.get('/login', function (req, res, next)
 /* Render Login page. */
 router.get('/loginSuccess', function (req, res, next) 
 {
-        res.render('login', 
+        res.render('loginSuccess', 
         {
-            title: 'Login',
-            //messages: req.flash('loginMessage'),
+            title: 'loginSuccess',
+            messages: req.flash('loginMessage'),
             displayName: req.user ? req.user.displayName : ''
         });
 });

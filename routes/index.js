@@ -78,7 +78,7 @@ router.post('/register', passport.authenticate('local-registration',
 router.get('/logout', function (req, res)
 {
   req.logout();
-  res.redirect('/');
+  res.redirect('/survey');
 });
 
 

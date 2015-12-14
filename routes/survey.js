@@ -1,9 +1,29 @@
 var express = require('express');
 var router = express.Router();
+var Truefalse = require('../models/surveyTrueFalse');
 
-/* GET home page. */
+
+
 router.get('/', function(req, res, next) {
-  res.render('survey', { title: 'Express' });
+
+    
+    Truefalse.find(function(err, survey) {
+        // if we have an error
+        if (err) {
+            console.log(err);
+            res.end(err);
+        }
+        else {
+           
+            res.render('survey', {
+               
+                survey: survey
+            });
+        }
+    });
+
 });
+
+
 
 module.exports = router;

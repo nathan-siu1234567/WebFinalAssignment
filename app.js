@@ -12,6 +12,7 @@ var bodyParser = require('body-parser');
 
 
 var TrueFalseSchema = new mongoose.Schema({
+  surveyTitle: String,
 	surveyQuestion: String,
 	surveyAnswer1: Number,
 	surveyQuestion2: String,
@@ -22,12 +23,6 @@ var TrueFalseSchema = new mongoose.Schema({
 	surveyAnswer4: Number,
 	surveyQuestion5: String,
 	surveyAnswer5: Number,
-	
-	surveyCount:Number,
-	surveyLifetime:Date
-	
-	
-	
 
 }, {
 	collection: 'trueFalse'
@@ -35,7 +30,7 @@ var TrueFalseSchema = new mongoose.Schema({
 var survey = mongoose.model('TrueFalse',TrueFalseSchema);
 mongoose.createConnection("mongodb://nathan:ns6098009@ds027155.mongolab.com:27155/truefalse");
 var trueFalseDB = mongoose.connection;
-trueFalseDB.on('error',console.error.bind(console,'connection error: '));
+trueFalseDB.on('error',console.error.bind(console,'Mongo connection error: '));
 
 
 //DB Setup 

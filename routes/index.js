@@ -38,6 +38,17 @@ router.get('/login', function (req, res, next)
     }
 });
 
+/* Render Login page. */
+router.get('/loginSuccess', function (req, res, next) 
+{
+        res.render('login', 
+        {
+            title: 'Login',
+            //messages: req.flash('loginMessage'),
+            displayName: req.user ? req.user.displayName : ''
+        });
+});
+
 /* Process the Login Request */
 router.post('/login', passport.authenticate('local-login', 
 {

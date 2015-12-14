@@ -41,7 +41,7 @@ router.get('/login', function (req, res, next)
 /* Process the Login Request */
 router.post('/login', passport.authenticate('local-login', 
 {
-    successRedirect: '/survey',
+    successRedirect: '/loginSuccess',
     failureRedirect: '/login',
     failureFlash: true
 }));

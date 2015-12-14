@@ -44,7 +44,7 @@ router.get('/loginSuccess', function (req, res, next)
         res.render('loginSuccess', 
         {
             title: 'loginSuccess',
-            messages: req.flash('loginMessage'),
+            //messages: req.flash('loginMessage'),
             displayName: req.user ? req.user.displayName : ''
         });
 });

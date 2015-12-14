@@ -38,12 +38,34 @@ router.get('/login', function (req, res, next)
     }
 });
 
-/* Render Login page. */
+/* Render Login success landing page. */
 router.get('/loginSuccess', function (req, res, next) 
 {
         res.render('loginSuccess', 
         {
             title: 'loginSuccess',
+            //messages: req.flash('loginMessage'),
+            displayName: req.user ? req.user.displayName : ''
+        });
+});
+
+/* Render Login success landing page. */
+router.get('/registerSuccess', function (req, res, next) 
+{
+        res.render('registerSuccess', 
+        {
+            title: 'registerSuccess',
+            //messages: req.flash('loginMessage'),
+            displayName: req.user ? req.user.displayName : ''
+        });
+});
+
+/* Render Login success landing page. */
+router.get('/surveyCreateSuccess', function (req, res, next) 
+{
+        res.render('surveyCreateSuccess', 
+        {
+            title: 'surveyCreateSuccess',
             //messages: req.flash('loginMessage'),
             displayName: req.user ? req.user.displayName : ''
         });

@@ -2,6 +2,7 @@ var mongoose = require('mongoose'); //import mongoose
 var Schema = mongoose.Schema;// alias for mongoose.Schema
 
 var TrueFalseSchema = new Schema({
+	surveyTitle: String,
 	surveyQuestion: String,
 	surveyAnswer1: Number,
 	surveyQuestion2: String,

@@ -4,9 +4,11 @@ var Truefalse = require('../models/surveyTrueFalse');
 
 
 
+
 router.get('/', function(req, res, next) {
 
     
+
     Truefalse.find(function(err, survey) {
         // if we have an error
         if (err) {
@@ -22,20 +24,6 @@ router.get('/', function(req, res, next) {
         }
     });
 
-});
-
-/* GET home page. */
-router.get('/:id', function(req, res, next) {
-  var id = req.params.id;
-  Truefalse.find(id, function(err, survey){
-
-  })
-
-
-  res.render('surveyTake', { 
-    title: 'Survey Take',
-    survey: survey 
-  });
 });
 
 

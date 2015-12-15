@@ -1,29 +1,62 @@
 <%- include partials/header.ejs %>
 
-    <h1>Survey Site - Surveys</h1>
-<ul>
-<% for(var i =0; i<survey.length; i++) { %>
+  <h1>Survey Site - Surveys</h1>
+
+
+
+  <div class="col-sm-6"> 
+    <h3>True/False Surveys</h3>
+    <div class="well"> 
+    <ul class="list-group">
+      <% for(var i =0; i<survey.length; i++) { %>
   
-<<<<<<< HEAD
+
   <div class="panel panel-default">
     <div class="panel-body">
  <li><%=survey[i].surveyTitle %></li>
  </div>
  </div>
   
-=======
+
  <li><%= survey[i].surveyTitle %></li>
   <li><%=survey[i].surveyQuestion %></li>
    <li><%=survey[i].surveyQuestion2 %></li>
     <li><%=survey[i].surveyQuestion3 %></li>
      <li><%=survey[i].surveyQuestion4 %></li>
       <li><%=survey[i].surveyQuestion5 %></li>
->>>>>>> origin/master
+
+      <li class="list-group-item-heading"><%= survey[i].surveyTitle %></li>
+      <li class="list-group-item"><%=survey[i].surveyQuestion %></li>
+      <li class="list-group-item"><%=survey[i].surveyQuestion2 %></li>
+      <li class="list-group-item"><%=survey[i].surveyQuestion3 %></li>
+      <li class="list-group-item"><%=survey[i].surveyQuestion4 %></li>
+      <li class="list-group-item"><%=survey[i].surveyQuestion5 %></li>
+
       </br>
   
-  <% } %>
+      <% } %>
+    </ul>
+    </div>
+  </div>
+
+ <div class="col-sm-6"> 
+   <h3>Short Answer Surveys</h3>
+    <div class="well"> 
+    <ul class="list-group">
+      <% for(var i =0; i<survey.length; i++) { %>
   
+      <li class="list-group-item-heading"><%= survey[i].surveyTitle %></li>
+      <li class="list-group-item"><%=survey[i].surveyQuestion %></li>
+      <li class="list-group-item"><%=survey[i].surveyQuestion2 %></li>
+      <li class="list-group-item"><%=survey[i].surveyQuestion3 %></li>
+      <li class="list-group-item"><%=survey[i].surveyQuestion4 %></li>
+      <li class="list-group-item"><%=survey[i].surveyQuestion5 %></li>
+      </br>
   
-  </ul>
+      <% } %>
+    </ul>
+    </div>
+  </div>
+
   </body>
 </html>

@@ -23,5 +23,23 @@
     </div>
   </div>
 
+   <h3>Short Answer Surveys</h3>
+    <div class="well"> 
+    <ul class="list-group">
+      <% for(var i =0; i<survey.length; i++) { %>
+  
+      <li class="list-group-item"><%= survey[i].surveyTitle %></li>
+      <li class="list-group-item"><%=survey[i].surveyQuestion %></li>
+      <li class="list-group-item"><%=survey[i].surveyQuestion2 %></li>
+      <li class="list-group-item"><%=survey[i].surveyQuestion3 %></li>
+      <li class="list-group-item"><%=survey[i].surveyQuestion4 %></li>
+      <li class="list-group-item"><%=survey[i].surveyQuestion5 %></li>
+      </br>
+  
+      <% } %>
+    </ul>
+    </div>
+  </div>
+
   </body>
 </html>

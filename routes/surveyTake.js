@@ -14,7 +14,7 @@ router.get('/:id', function(req, res, next) {
 
   res.render('surveyTake', { 
   	title: 'Survey Take',
-  	survey: Survey 
+  	Survey: survey 
   });
 });
 

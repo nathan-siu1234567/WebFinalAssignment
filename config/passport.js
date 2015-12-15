@@ -89,7 +89,7 @@ module.exports = function(passport)
 					//check if username is in use
 					if(user) 
 					{
-						return done(null, false, req.flash('registrationMessage', 'The username is already take'));
+						//return done(null, false, req.flash('registrationMessage', 'The username is already take'));
 					}
 					else 
 					{

@@ -11,7 +11,7 @@
       <% for(var i =0; i<survey.length; i++) { %>
 
   
-      <li class="list-group-item list-group-item-info"><a href="/surveyTake<%= survey[i]._id %>"><%= survey[i].surveyTitle %></a></li>
+      <li class="list-group-item list-group-item-info"><a href="/surveyTake/<%= survey[i]._id %>"><%= survey[i].surveyTitle %></a></li>
       <!--<li class="list-group-item"><%=survey[i]._id %></li>-->
       <li class="list-group-item"><%=survey[i].surveyQuestion %></li>
       <li class="list-group-item"><%=survey[i].surveyQuestion2 %></li>

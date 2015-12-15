@@ -17,7 +17,7 @@ router.get('/:id', function(req, res, next) {
         }
         else {
         	res.render('surveyTake', { 
-        		
+        	id: id,	
   			survey: survey 
   			});
   		}

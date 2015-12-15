@@ -11,10 +11,10 @@ router.get('/:id', function(req, res, next) {
 
   })
 
-
+  
   res.render('surveyTake', { 
   	title: 'Survey Take',
-  	Survey: survey 
+  	survey: survey 
   });
 });
 

@@ -4,13 +4,13 @@
 
 
 
-  <div class="col-sm-4"> 
+  <div class="col-sm-6"> 
     <h3>True/False Surveys</h3>
     <div class="well"> 
     <ul class="list-group">
       <% for(var i =0; i<survey.length; i++) { %>
   
-      <li class="list-group-item"><%= survey[i].surveyTitle %></li>
+      <li class="list-group-item-heading"><%= survey[i].surveyTitle %></li>
       <li class="list-group-item"><%=survey[i].surveyQuestion %></li>
       <li class="list-group-item"><%=survey[i].surveyQuestion2 %></li>
       <li class="list-group-item"><%=survey[i].surveyQuestion3 %></li>
@@ -23,13 +23,13 @@
     </div>
   </div>
 
- <div class="col-sm-4"> 
+ <div class="col-sm-6"> 
    <h3>Short Answer Surveys</h3>
     <div class="well"> 
     <ul class="list-group">
       <% for(var i =0; i<survey.length; i++) { %>
   
-      <li class="list-group-item"><%= survey[i].surveyTitle %></li>
+      <li class="list-group-item-heading"><%= survey[i].surveyTitle %></li>
       <li class="list-group-item"><%=survey[i].surveyQuestion %></li>
       <li class="list-group-item"><%=survey[i].surveyQuestion2 %></li>
       <li class="list-group-item"><%=survey[i].surveyQuestion3 %></li>

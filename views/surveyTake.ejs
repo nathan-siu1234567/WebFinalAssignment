@@ -4,18 +4,16 @@
 
     <ul class="list-group">
     	<li><%= survey._id %></li>
+
     	<% for(var i = 0; i < survey.length; i++) { %>
-    	<li> <%= survey[i]._id %></li>
-    		<% if(survey._id == survey[i]._id){ %>
     			
+    			<li class="list-group-item"><%= survey[i]._id %></li>
     			<li class="list-group-item list-group-item-info"><%= survey[i].surveyTitle %></li>
       			<li class="list-group-item"><%=survey[i].surveyQuestion %></li>
       			<li class="list-group-item"><%=survey[i].surveyQuestion2 %></li>
       			<li class="list-group-item"><%=survey[i].surveyQuestion3 %></li>
       			<li class="list-group-item"><%=survey[i].surveyQuestion4 %></li>
       			<li class="list-group-item"><%=survey[i].surveyQuestion5 %></li>
-      			
-    		<% } %>
     	<% } %>
     </ul>
   </body>

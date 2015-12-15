@@ -24,6 +24,20 @@ router.get('/', function(req, res, next) {
 
 });
 
+/* GET home page. */
+router.get('/:id', function(req, res, next) {
+  var id = req.params.id;
+  Truefalse.find(id, function(err, survey){
+
+  })
+
+
+  res.render('surveyTake', { 
+    title: 'Survey Take',
+    survey: survey 
+  });
+});
+
 
 
 module.exports = router;

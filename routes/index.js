@@ -16,7 +16,7 @@ router.get('/', function(req, res, next) {
 router.get('/', function (req, res, next) {
     res.render('index', {
         title: 'Home',
-        displayName: req.user ? req.user.displayName : ''
+        username: req.user ? req.user.username : ''
     });
 });
 
@@ -29,7 +29,7 @@ router.get('/login', function (req, res, next)
         {
             title: 'Login',
             //messages: req.flash('loginMessage'),
-            displayName: req.user ? req.user.displayName : ''
+            username: req.user ? req.user.username : ''
         });
     }
     else 
@@ -45,7 +45,7 @@ router.get('/logoutSuccess', function (req, res, next)
         {
             title: 'logoutSuccess',
             //messages: req.flash('loginMessage'),
-            displayName: req.user ? req.user.displayName : ''
+            username: req.user ? req.user.username : ''
         });
 });
 
@@ -56,7 +56,7 @@ router.get('/loginSuccess', function (req, res, next)
         {
             title: 'loginSuccess',
             //messages: req.flash('loginMessage'),
-            displayName: req.user ? req.user.displayName : ''
+            username: req.user ? req.user.username : ''
         });
 });
 
@@ -67,7 +67,7 @@ router.get('/registerSuccess', function (req, res, next)
         {
             title: 'registerSuccess',
             //messages: req.flash('loginMessage'),
-            displayName: req.user ? req.user.displayName : ''
+            username: req.user ? req.user.username : ''
         });
 });
 
@@ -78,7 +78,7 @@ router.get('/surveyCreateSuccess', function (req, res, next)
         {
             title: 'surveyCreateSuccess',
             //messages: req.flash('loginMessage'),
-            displayName: req.user ? req.user.displayName : ''
+            username: req.user ? req.user.username : ''
         });
 });
 
@@ -99,7 +99,7 @@ router.get('/register', function (req, res, next)
         {
             title: 'Register',
             //messages: req.flash('registerMessage'),
-            displayName: req.user ? req.user.displayName : ''
+            username: req.user ? req.user.username : ''
         });
     }
     else 

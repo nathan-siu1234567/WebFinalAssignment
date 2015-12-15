@@ -76,6 +76,13 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use(session({
+  secret: 'someSecret',
+  saveUninitialized: true,
+  resave: true
+})
+  )
+
 
 
 

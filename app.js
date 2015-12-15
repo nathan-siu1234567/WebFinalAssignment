@@ -72,21 +72,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
-app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
-
-app.use(session({
-  secret: 'someSecret',
-  saveUninitialized: true,
-  resave: true
-})
-  )
-
-
-
-
-
 
 
 app.use('/', routes);

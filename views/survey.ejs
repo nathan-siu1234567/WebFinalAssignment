@@ -1,20 +1,20 @@
 <%- include partials/header.ejs %>
 
-    <h1>Survey Site - Surveys</h1>
-<ul class="list-group">
-<% for(var i =0; i<survey.length; i++) { %>
+  <h1>Survey Site - Surveys</h1>
+  <div class="panel panel-default"> 
+  <ul class="list-group">
+    <% for(var i =0; i<survey.length; i++) { %>
   
- <li class="list-group-item"><%= survey[i].surveyTitle %></li>
-  <li class="list-group-item"><%=survey[i].surveyQuestion %></li>
-   <li class="list-group-item"><%=survey[i].surveyQuestion2 %></li>
+    <li class="list-group-item"><%= survey[i].surveyTitle %></li>
+    <li class="list-group-item"><%=survey[i].surveyQuestion %></li>
+    <li class="list-group-item"><%=survey[i].surveyQuestion2 %></li>
     <li class="list-group-item"><%=survey[i].surveyQuestion3 %></li>
-     <li class="list-group-item"><%=survey[i].surveyQuestion4 %></li>
-      <li class="list-group-item"><%=survey[i].surveyQuestion5 %></li>
-      </br>
+    <li class="list-group-item"><%=survey[i].surveyQuestion4 %></li>
+    <li class="list-group-item"><%=survey[i].surveyQuestion5 %></li>
+    </br>
   
   <% } %>
-  
-  
   </ul>
+  </div>
   </body>
 </html>

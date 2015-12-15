@@ -70,6 +70,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use(session({
   secret: 'someSecret',
   saveUninitialized: true,
@@ -77,9 +83,7 @@ app.use(session({
 })
   )
 
-app.use(flash());
-app.use(passport.initialize());
-app.use(passport.session());
+
 
 
 

@@ -12,9 +12,10 @@
       				  <li class="list-group-item"><%=survey[i].surveyQuestion %></li>
 
                 <fieldset class="form-group">
-                  <li><input type="radio" name="surveyAnswer1"  value="True"  class="form-control" required autofocus />
-
-                  <input type="radio" name="surveyAnswer1"  value="False"  class="form-control" /></li>
+                  <li>
+                    <input type="radio" name="surveyAnswer1True"  value="True"  class="form-control" required autofocus />
+                    <label for="aurveyAnswer1True">True</label>
+                  <input type="radio" name="surveyAnswer1False"  value="False"  class="form-control" /></li>
                 </fieldset>
 
       				  <li class="list-group-item"><%=survey[i].surveyQuestion2 %></li>

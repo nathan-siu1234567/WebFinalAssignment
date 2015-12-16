@@ -27,10 +27,28 @@ var TrueFalseSchema = new mongoose.Schema({
 }, {
 	collection: 'trueFalse'
 });
+
 var survey = mongoose.model('TrueFalse',TrueFalseSchema);
 mongoose.createConnection("mongodb://nathan:ns6098009@ds027155.mongolab.com:27155/truefalse");
 var trueFalseDB = mongoose.connection;
 trueFalseDB.on('error',console.error.bind(console,'Mongo connection error: '));
+
+//short answer
+var ShortAnswerSchema = new mongoose.Schema({
+	surveyQuestion: String
+	
+
+}, {
+	collection: 'shortAnswer'
+});
+
+var shortanswer = mongoose.model('ShortAnswer',ShortAnswerSchema);
+mongoose.createConnection("mongodb://nathan:ns6098009@ds027155.mongolab.com:27155/truefalse");
+var shortanswerDB = mongoose.connection;
+shortanswerDB.on('error',console.error.bind(console,'Mongo connection error: '));
+
+
+
 
 
 //DB Setup 

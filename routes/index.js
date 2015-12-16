@@ -6,6 +6,7 @@ var router = express.Router();
 
 var User = require('../models/user');
 var Truefalse = require('../models/surveyTrueFalse');
+var Shortanswer = require('../models/surveyShortAnswer');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -152,6 +153,23 @@ router.post('/trueFalse',function(req,res){
     
     });
     survey.save();
+   
+   
+    
+});
+
+//post shortanswer creation
+router.post('/shortAnswer',function(req,res){
+    
+    
+    var question = req.body.surveyquestion;
+   
+
+    var shortanswer = new Shortanswer({surveyQuestion: question
+    
+    
+    });
+    shortanswer.save();
    
    
     

@@ -7,21 +7,62 @@
   <div class="col-sm-6"> 
     <h3>True/False Surveys</h3>
     <div class="well"> 
+    <form>
     <ul class="list-group">
       <% for(var i =0; i<survey.length; i++) { %>
 
-  
+ 
       <li class="list-group-item list-group-item-info"><a href="/surveyTake/<%= survey[i]._id %>"><%= survey[i].surveyTitle %></a></li>
-      <!--<li class="list-group-item"><%=survey[i]._id %></li>-->
       <li class="list-group-item"><%=survey[i].surveyQuestion %></li>
+      <li class="list-group-item">
+      <form>
+        <input type="radio" name="true" value="true" id="truebutton1"/>
+        <label for="truebutton1">True</label>
+        <input type="radio" name="true" value="false" id="falsebutton1"/>
+        <label for="falsebutton1">False</label>
+      </form>
+      </li>
       <li class="list-group-item"><%=survey[i].surveyQuestion2 %></li>
+      <li class="list-group-item">
+      <form>
+        <input type="radio" name="true" value="true" id="truebutton1"/>
+        <label for="truebutton1">True</label>
+        <input type="radio" name="true" value="false" id="falsebutton1"/>
+        <label for="falsebutton1">False</label>
+      </form>
+      </li>
       <li class="list-group-item"><%=survey[i].surveyQuestion3 %></li>
+      <li class="list-group-item">
+      <form>
+        <input type="radio" name="true" value="true" id="truebutton1"/>
+        <label for="truebutton1">True</label>
+        <input type="radio" name="true" value="false" id="falsebutton1"/>
+        <label for="falsebutton1">False</label>
+      </form>
+      </li>
       <li class="list-group-item"><%=survey[i].surveyQuestion4 %></li>
+      <li class="list-group-item">
+      <form>
+        <input type="radio" name="true" value="true" id="truebutton1"/>
+        <label for="truebutton1">True</label>
+        <input type="radio" name="true" value="false" id="falsebutton1"/>
+        <label for="falsebutton1">False</label>
+      </form>
+      </li>
       <li class="list-group-item"><%=survey[i].surveyQuestion5 %></li>
+      <li class="list-group-item">
+      <form>
+        <input type="radio" name="true" value="true" id="truebutton1"/>
+        <label for="truebutton1">True</label>
+        <input type="radio" name="true" value="false" id="falsebutton1"/>
+        <label for="falsebutton1">False</label>
+      </form>
+      </li>
       </br>
   
       <% } %>
     </ul>
+  </form>
     </div>
   </div>
 

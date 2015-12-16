@@ -9,4 +9,4 @@ var ShortAnswerSchema = new Schema({
 	collection: 'shortAnswer'
 });
 
-module.exports = mongoose.model('surveyShortAnswer', ShortAnswerSchema);
+module.exports = mongoose.model('shortanswer', ShortAnswerSchema);

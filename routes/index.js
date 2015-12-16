@@ -165,13 +165,14 @@ router.post('/shortAnswer',function(req,res){
     var question = req.body.surveyquestion;
    
 
-    var shortanswer = new Shortanswer({surveyQuestion: question
+    var surveytf = new Shortanswer({surveyQuestion: question
     
     
     });
-    shortanswer.save();
+    surveytf.save();
    
    
     
 });
+
 module.exports = router;

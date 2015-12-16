@@ -31,7 +31,7 @@ router.get('/', function(req, res, next) {
 
     
 
-    Shortanswer.find(function(err, shortanswer) {
+    Shortanswer.find(function(err, survey) {
         // if we have an error
         if (err) {
             console.log(err);
@@ -40,8 +40,8 @@ router.get('/', function(req, res, next) {
         else {
            
             res.render('survey', {
-               
-                shortanswer: shortanswer
+                test: "OM NOM NOM"
+                //surveytf: survey
             });
         }
     });

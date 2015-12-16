@@ -6,12 +6,25 @@
     	<% for(var i = 0; i < survey.length; i++) { %>
 
       			<% if(id == survey[i]._id){ %>
-    				<li class="list-group-item list-group-item-info"><%= survey[i].surveyTitle %></li>
-      				<li class="list-group-item"><%=survey[i].surveyQuestion %></li>
-      				<li class="list-group-item"><%=survey[i].surveyQuestion2 %></li>
-      				<li class="list-group-item"><%=survey[i].surveyQuestion3 %></li>
-      				<li class="list-group-item"><%=survey[i].surveyQuestion4 %></li>
-      				<li class="list-group-item"><%=survey[i].surveyQuestion5 %></li>
+
+              <form method="post">
+    				    <li class="list-group-item list-group-item-info"><%= survey[i].surveyTitle %></li>
+      				  <li class="list-group-item"><%=survey[i].surveyQuestion %></li>
+
+                <fieldset class="form-group">
+                <label for="surveyAnswer1">Answer 1: *</label>
+                  <input name="surveyAnswer`" type="radio" value="True"  class="form-control" required autofocus />
+                  <input name="surveyAnswer`" type="radio" value="False"  class="form-control" required autofocus />
+                </fieldset>
+
+      				  <li class="list-group-item"><%=survey[i].surveyQuestion2 %></li>
+      				  <li class="list-group-item"><%=survey[i].surveyQuestion3 %></li>
+      				  <li class="list-group-item"><%=survey[i].surveyQuestion4 %></li>
+      				  <li class="list-group-item"><%=survey[i].surveyQuestion5 %></li>
+              <fieldset class="form-group text-right">
+                <input type="submit" class="btn btn-success" value="Create Survey"/>
+              </fieldset>
+              </form>
       			<% } %>
     	<% } %>
 

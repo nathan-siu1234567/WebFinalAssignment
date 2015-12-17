@@ -3,7 +3,6 @@
     <h1>Survey Site - Survey Take</h1>
 
     <ul class="list-group">
-      <!--Loop throught the database and find the matching id and create the survey that is to be taken-->
     	<% for(var i = 0; i < survey.length; i++) { %>
 
       			<% if(id == survey[i]._id){ %>
@@ -13,12 +12,10 @@
     				    <li class="list-group-item list-group-item-info"><%= survey[i].surveyTitle %></li>
       				  <li class="list-group-item"><%=survey[i].surveyQuestion %></li>
                 <li class="list-group-item">
-
                 <input type="radio" name="true1" value="true" id="truebutton1"/>
                 <label for="truebutton1">True</label>
                 <input type="radio" name="false1" value="false" id="falsebutton1"/>
                 <label for="falsebutton1">False</label>
-                
                 </li>
       				  <li class="list-group-item"><%=survey[i].surveyQuestion2 %></li>
                 <li class="list-group-item">
@@ -49,7 +46,7 @@
                 <label for="falsebutton5">False</label>
                 </li>
               <fieldset class="form-group text-right">
-                <input type="submit" class="btn btn-success" value="Create Survey"/>
+                <input type="submit" class="btn btn-success" value="Submit Survey"/>
               </fieldset>
               </form>
       			<% } %>

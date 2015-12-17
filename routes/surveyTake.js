@@ -1,5 +1,7 @@
 //This is the route for the SurveyTake ejs 
-//Authors: Nathan, Christain, Ryan  
+//Authors: Nathan, Christain, Ryan 
+//website: finalAssignment.azurewebsite.com
+//surevyTake.js 
 var express = require('express');
 var router = express.Router();
 var Truefalse = require('../models/surveyTrueFalse');
@@ -25,5 +27,7 @@ router.get('/:id', function(req, res, next) {
   		}
   });
 });
+
+
 
 module.exports = router;

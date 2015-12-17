@@ -1,5 +1,7 @@
 //This is the route for the About template it renders the about ejs
 //Authors: Nathan, Christain, Ryan	
+//website: finalAssignment.azurewebsite.com
+//about.js
 var express = require('express');
 var router = express.Router();
 

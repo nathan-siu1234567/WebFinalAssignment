@@ -11,6 +11,7 @@ var router = express.Router();
 var User = require('../models/user');
 var Truefalse = require('../models/surveyTrueFalse');
 var Shortanswer = require('../models/surveyShortAnswer');
+var Completesurvey = require('../models/completedSurvey');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -174,6 +175,33 @@ router.post('/shortAnswer',function(req,res){
     
     });
     surveytf.save();
+   
+   
+    
+});
+
+//saving the completed survey
+router.post('/surveyTake/:id',function(req,res){
+    
+    
+    var title = req.body.surveytitle;
+    var questionOne = req.body.surveyquestion;
+    var answer1 = req.body.answer1;
+    var questionTwo = req.body.surveyquestion2;
+    var answer2 = req.body.answer2;
+    var questionThree = req.body.surveyquestion3;
+    var answer3 = req.body.answer3;
+    var questionFour = req.body.surveyquestion4;
+    var answer4 = req.body.answer4;
+    var questionFive = req.body.surveyquestion5;
+    var answer5 = req.body.answer5;
+
+    var surveyComplete = new Completesurvey({surveyTitle: title, surveyQuestion: questionOne, surveyAnswer1:answer1, surveyQuestion2: questionTwo, surveyAnswer2:answer2, surveyQuestion3: questionThree,
+   surveyAnswer3:answer3, surveyQuestion4: questionFour,surveyAnswer4:answer4, surveyQuestion5: questionFive,surveyAnswer5:answer5
+    
+    
+    });
+    surveyComplete.save();
    
    
     

@@ -24,4 +24,12 @@ router.get('/:id', function(req, res, next) {
   });
 });
 
+router.post('/surveyTake',function(req,res){
+    
+    
+    console.log("Succesful survey take");
+    });
+    
+});
+
 module.exports = router;

@@ -1,3 +1,7 @@
+//This is the index route it handles the routing for the login and for the survey creation
+//Authors: Nathan, Christain, Ryan  
+//website: finalAssignment.azurewebsite.com
+//index.js
 var express = require('express');
 var passport = require('passport');
 var router = express.Router();
@@ -175,4 +179,5 @@ router.post('/shortAnswer',function(req,res){
     
 });
 
+//make it all public
 module.exports = router;

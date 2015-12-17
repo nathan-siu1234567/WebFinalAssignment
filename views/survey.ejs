@@ -1,3 +1,4 @@
+<!--this is the template for displaying the surveys-->
 <%- include partials/header.ejs %>
 
   <h1>Survey Site - Surveys</h1>
@@ -9,6 +10,7 @@
     <div class="well"> 
     <form>
     <ul class="list-group">
+      <!--Display the true false surveys-->
       <% for(var i =0; i<survey.length; i++) { %>
 
  
@@ -30,6 +32,7 @@
    <h3>Short Answer Surveys</h3>
     <div class="well"> 
     <ul class="list-group">
+      <!--Display the short answer surveys-->
       <% for(var i =0; i<survey.length; i++) { %>
   
       <li class="list-group-item list-group-item-info"><%= survey[i].surveyTitle %></li>

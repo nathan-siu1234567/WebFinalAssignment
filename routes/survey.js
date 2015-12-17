@@ -1,3 +1,7 @@
+//This is the route for the Survey ejs which gets the surveys from the database and sends it to the ejs
+//Authors: Nathan, Christain, Ryan  
+//website: finalAssignment.azurewebsite.com
+//survey.js
 var express = require('express');
 var router = express.Router();
 var Truefalse = require('../models/surveyTrueFalse');

@@ -1,3 +1,4 @@
+<!--This is the header for all ejs templates must include this in order for the templates to have a consistent header throughout all templates-->
 <html>
   <head>
     <title>Super Stools Surveys</title>
@@ -18,30 +19,17 @@
 
       <ul class="nav nav-tabs">
         <li role="presentation"><a href="/survey">SURVEYS</a></li>
-        
-        
-        <!-- <li role="presentation"><a href="/surveyCreate">CREATE SURVEY</a></li> -->
         <li role="presentation" class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                 CREATE SURVEY <span class="caret"></span>
             </a>
+            <!--Drop down for survey creation-->
             <ul class="dropdown-menu" aria-labelledby="dLabel">
                 <li role="presentation"><a href="/shortAnswer">SHORT ANSWER</a></li>
                 <li role="presentation"><a href="/trueFalse">TRUE/FALSE</a></li>
 
             </ul>
         </li>
-        <!--
-        <li role="presentation" class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                CREATE SURVEY <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-            <li role="presentation"><a href="/shortAnswer">SHORT ANSWER</a></li>
-            <li role="presentation"><a href="/trueFalse">TRUE/FALSE</a></li>
-            </ul>
-        </li>  
-        -->
         <li role="presentation"><a href="/about">ABOUT</a></li>
         
         <li role="presentation"><a href="/login">LOGIN</a></li>

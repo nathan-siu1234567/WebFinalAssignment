@@ -1,3 +1,5 @@
+//This is the route for the SurveyTake ejs 
+//Authors: Nathan, Christain, Ryan  
 var express = require('express');
 var router = express.Router();
 var Truefalse = require('../models/surveyTrueFalse');

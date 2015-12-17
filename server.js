@@ -4,7 +4,7 @@
 //website: finalAssignment.azurewebsite.com
 //server.js
 
-#!/usr/bin/env node
+
 
 /**
  * Module dependencies.

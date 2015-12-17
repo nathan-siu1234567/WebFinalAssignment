@@ -24,4 +24,4 @@ var CompleteSurvey = new Schema({
 	collection: 'completeSurvey'
 });
 
-module.exports = mongoose.model('truefalse', CompleteSurvey);
+module.exports = mongoose.model('completeSurvey', CompleteSurvey);

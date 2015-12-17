@@ -1,9 +1,9 @@
-<!--
+
 //This is the main app.js file it handles the modules tha are required and sets up most of the modeuls to work with eachother
 //Authors: Nathan, Christain, Ryan  
 //website: finalAssignment.azurewebsite.com
 //app.js
--->
+
 var express = require('express');
 var passport = require('passport');
 var mongoose = require('mongoose');
@@ -52,6 +52,34 @@ var shortanswer = mongoose.model('ShortAnswer',ShortAnswerSchema);
 mongoose.createConnection("mongodb://nathan:ns6098009@ds027155.mongolab.com:27155/truefalse");
 var shortanswerDB = mongoose.connection;
 shortanswerDB.on('error',console.error.bind(console,'Mongo connection error: '));
+//completed 
+var CompleteSurvey = new mongoose.Schema({
+	surveyTitle: String,
+	surveyQuestion: String,
+	surveyAnswer1: Number,
+	surveyQuestion2: String,
+	surveyAnswer2: Number,
+	surveyQuestion3: String,
+	surveyAnswer3: Number,
+	surveyQuestion4: String,
+	surveyAnswer4: Number,
+	surveyQuestion5: String,
+	surveyAnswer5: Number,
+	
+	surveyCount:Number,
+	surveyLifetime:Date
+	
+	
+	
+
+}, {
+	collection: 'completeSurvey'
+});
+
+var completedsurvey = mongoose.model('CompleteSurvey',CompleteSurvey);
+mongoose.createConnection("mongodb://nathan:ns6098009@ds027155.mongolab.com:27155/truefalse");
+var completeSurveyDB = mongoose.connection;
+completeSurveyDB.on('error',console.error.bind(console,'Mongo connection error: '));
 
 
 

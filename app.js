@@ -1,3 +1,9 @@
+<!--
+//This is the main app.js file it handles the modules tha are required and sets up most of the modeuls to work with eachother
+//Authors: Nathan, Christain, Ryan  
+//website: finalAssignment.azurewebsite.com
+//app.js
+-->
 var express = require('express');
 var passport = require('passport');
 var mongoose = require('mongoose');

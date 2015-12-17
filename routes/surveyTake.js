@@ -24,4 +24,11 @@ router.get('/:id', function(req, res, next) {
   });
 });
 
+//post shortanswer creation
+router.post('/surveyTake',function(req,res){
+    
+    console.log("Successfully creted survey");
+    });  
+});
+
 module.exports = router;
